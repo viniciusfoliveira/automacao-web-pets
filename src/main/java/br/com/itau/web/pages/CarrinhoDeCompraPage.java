@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import br.com.itau.web.utils.EsperaUtils;
+import br.com.itau.web.utils.Utils;
 
 public class CarrinhoDeCompraPage {
 
@@ -27,9 +27,9 @@ public class CarrinhoDeCompraPage {
 
 	public String ProdutoCamposCarrinhoDeCOmpra() {
 		
-		EsperaUtils.waitPresenceOfElement(resumoCarrinhoCompra, 120);
+		Utils.waitPresenceOfElement(resumoCarrinhoCompra, 120);
 		
-		EsperaUtils.waitPresenceOfElement(resumoCarrinhoCompra.findElement(By.tagName("a")), 120);
+		Utils.waitPresenceOfElement(resumoCarrinhoCompra.findElement(By.tagName("a")), 120);
 		
 		return resumoCarrinhoCompra.findElement(By.tagName("a")).getText();
 	}

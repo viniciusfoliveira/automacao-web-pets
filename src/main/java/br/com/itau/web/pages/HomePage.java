@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import br.com.itau.web.utils.EsperaUtils;
+import br.com.itau.web.utils.Utils;
 
 public class HomePage {
 
@@ -56,9 +56,9 @@ public class HomePage {
 
 		sleep();
 
-		EsperaUtils.waitPresenceOfElement(getDriver().findElement(By.className("liProduct")), 120);
+		Utils.waitPresenceOfElement(getDriver().findElement(By.className("liProduct")), 120);
 
-		EsperaUtils.waitPresenceOfElement(itens.get(item).findElements(By.id("produto-href")).get(0), 60);
+		Utils.waitPresenceOfElement(itens.get(item).findElements(By.id("produto-href")).get(0), 60);
 		
          return itens.get(item)
         		 .findElements(By.id("produto-href")).get(0).getAttribute("data-nomeproduto");
@@ -81,7 +81,7 @@ public class HomePage {
 	}
 	public String nomeFornecedor () {
 
-		EsperaUtils.waitPresenceOfElement(nomeFornecedor, 120);
+		Utils.waitPresenceOfElement(nomeFornecedor, 120);
 
 		return nomeFornecedor.getText();
 	}
